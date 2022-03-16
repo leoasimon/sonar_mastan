@@ -1,4 +1,4 @@
-import { List, Result } from "antd";
+import { List, Result, Spin } from "antd";
 import React from "react";
 import { useCharacters } from "../useCharacters";
 
@@ -12,6 +12,10 @@ const CharactersList: React.FC<CharactersListProps> = ({ urls }) => {
   if (error) {
     return <Result status="error" title={error} />;
   }
+  if (loading) {
+    return <Spin />;
+  }
+  return <p>{characters?.map((character) => character.name).join(", ")}.</p>;
   return (
     <List
       dataSource={characters}
