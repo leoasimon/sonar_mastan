@@ -1,7 +1,7 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Book } from "./types";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 import * as booksApi from "./booksApi";
-import { AppDispatch, RootState } from "../../app/store";
+import { Book } from "./types";
 
 export interface BooksState {
   value: Book[];

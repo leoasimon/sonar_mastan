@@ -30,7 +30,6 @@ const BookDetailsPage: React.FC = () => {
       book?.name
     );
 
-  console.log({ status, book });
   return (
     <>
       <PageHeader title={title} onBack={() => navigate("/")} />
