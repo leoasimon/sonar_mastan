@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Character } from "./types";
 import * as charactersApi from "./charactersApi";
+import { Character } from "./types";
 
 export const useCharacters = (urls: string[]) => {
   const [data, setData] = useState<Character[]>();
