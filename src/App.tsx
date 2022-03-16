@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css";
-import BooksListPage from "./features/books/pages/booksList";
+import AppRouter from "./app/AppRouter";
+import AppLayout from "./app/ui/components/appLayout";
 
 function App() {
   return (
     <div className="App">
-      <BooksListPage />
+      <AppLayout>
+        <AppRouter />
+      </AppLayout>
     </div>
   );
 }
